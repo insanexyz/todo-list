@@ -107,7 +107,6 @@ li span {
   inherits: false;
 }
 
-
 .btn::after, .btn::before {
   content: "";
   position: absolute;
@@ -128,7 +127,6 @@ li span {
   opacity: 0.5;
 }
 
-
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -142,7 +140,7 @@ li span {
 @media (max-width: 840px) {
 
   body {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .main {
@@ -152,7 +150,7 @@ li span {
 
 
   h1 {
-    font-size: 48px;
+    font-size: 38px;
     margin-bottom: 45px;
   }
 
@@ -164,7 +162,7 @@ li span {
 
   form input {
     padding: 5px;
-    font: 24px;
+    font: 20px;
   }
 
   .add-item-btn {
@@ -173,7 +171,7 @@ li span {
   }
 
   .btn {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   li {
