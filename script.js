@@ -1,6 +1,10 @@
 const ul = document.querySelector("ul");
 const input = document.querySelector("input");
 const addItemBtn = document.querySelector(".add-item-btn");
+const mainContainer = document.querySelector(".main");
+
+const mainContainerWidth = mainContainer.clientWidth;
+
 
 addItemBtn.addEventListener("click", (e) => {
 
@@ -16,27 +20,19 @@ addItemBtn.addEventListener("click", (e) => {
   const span = document.createElement("span");
   const deleteBtn = document.createElement("button");
 
-  li.appendChild(span);
-  li.appendChild(deleteBtn);
-
   span.textContent = itemValue;
   deleteBtn.textContent = "Delete";
-  deleteBtn.classList.add("delete-btn");
-  deleteBtn.classList.add("btn");
-
+  deleteBtn.classList.add("delete-btn", "btn");
+  
+  li.appendChild(span);
+  li.appendChild(deleteBtn);
   ul.appendChild(li);
 
-
   // Delete button functionality
-  const allDeleteBtns = document.querySelectorAll(".delete-btn");
-
-  allDeleteBtns.forEach(deleteBtn => {
-    deleteBtn.addEventListener("click", (event) => {
-      event.target.parentNode.remove();
-    })
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
   })
 
   // Refocus to add new item
   input.focus();
 })
-
